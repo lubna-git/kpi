@@ -21,18 +21,18 @@
   },
   {
    "fieldname": "description",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "label": "Description"
   },
   {
    "fieldname": "score",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "label": "Score"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-01-04 11:12:50.475419",
+ "modified": "2023-01-04 14:18:10.922718",
  "modified_by": "Administrator",
  "module": "Kpi",
  "name": "KPI",
