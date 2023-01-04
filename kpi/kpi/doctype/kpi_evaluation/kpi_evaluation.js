@@ -7,7 +7,7 @@ frappe.ui.form.on('KPI Evaluation', {
 			cur_frm.set_query("task", function(){
 				return {
 					"filters": {
-						"completed_by":doc.frm.user
+						"completed_by":frm.doc.user
 					} 
 				}
 			})},
