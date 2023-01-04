@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2023-01-03 11:22:30.091533",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "kpi",
+  "description",
+  "score",
+  "evaluation",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "kpi",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "KPI",
+   "options": "KPI"
+  },
+  {
+   "fetch_from": "kpi.description",
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fetch_from": "kpi.score",
+   "fieldname": "score",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Score"
+  },
+  {
+   "fieldname": "evaluation",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Evaluation"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Note"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-04 11:12:27.315030",
+ "modified_by": "Administrator",
+ "module": "Kpi",
+ "name": "KPI Table",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
