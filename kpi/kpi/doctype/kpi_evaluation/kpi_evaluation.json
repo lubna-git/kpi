@@ -9,13 +9,15 @@
  "engine": "InnoDB",
  "field_order": [
   "employee",
+  "user",
   "team_leader",
   "kpi_template",
   "section_break_5",
   "task",
   "task_subject",
   "section_break_7",
-  "kpi"
+  "kpi",
+  "amended_from"
  ],
  "fields": [
   {
@@ -31,8 +33,7 @@
    "fieldname": "team_leader",
    "fieldtype": "Link",
    "label": "Team Leader",
-   "options": "Employee",
-   "reqd": 1
+   "options": "Employee"
   },
   {
    "fieldname": "kpi_template",
@@ -66,11 +67,28 @@
    "fieldtype": "Table",
    "label": "KPI",
    "options": "KPI Table"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "KPI Evaluation",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.user_id",
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-01-04 11:23:37.242754",
+ "modified": "2023-01-04 15:11:34.453756",
  "modified_by": "Administrator",
  "module": "Kpi",
  "name": "KPI Evaluation",

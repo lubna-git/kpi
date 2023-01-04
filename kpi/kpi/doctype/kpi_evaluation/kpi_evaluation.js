@@ -3,12 +3,11 @@
 
 frappe.ui.form.on('KPI Evaluation', {
 	// filter the task depande on Employee name
-		employee: async function(frm) {
-			let doc =await frappe.db.get_doc('Employee', frm.doc.employee)
+		employee: function(frm) {
 			cur_frm.set_query("task", function(){
 				return {
 					"filters": {
-						"completed_by":doc.user_id
+						"completed_by":doc.frm.user
 					} 
 				}
 			})},

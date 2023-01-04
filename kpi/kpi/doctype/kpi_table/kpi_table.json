@@ -43,13 +43,14 @@
   {
    "fieldname": "note",
    "fieldtype": "Small Text",
+   "in_list_view": 1,
    "label": "Note"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-01-04 14:28:03.103926",
+ "modified": "2023-01-04 14:51:52.605379",
  "modified_by": "Administrator",
  "module": "Kpi",
  "name": "KPI Table",
