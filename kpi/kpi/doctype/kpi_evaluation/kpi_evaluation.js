@@ -21,3 +21,11 @@ frappe.ui.form.on('KPI Evaluation', {
 		},  
 	});
 	
+
+
+
+frappe.ui.form.on('KPI Evaluation', {
+	refresh : function(frm){
+		console.log()
+	}
+})
