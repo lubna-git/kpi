@@ -12,6 +12,7 @@
   "user",
   "kpi_template",
   "velocity",
+  "expected_time",
   "include_code",
   "section_break_5",
   "team_leader",
@@ -95,12 +96,17 @@
    "fieldtype": "Duration",
    "hide_seconds": 1,
    "label": "Velocity "
+  },
+  {
+   "fieldname": "expected_time",
+   "fieldtype": "Float",
+   "label": "Expected Time"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-01-11 18:33:31.592407",
+ "modified": "2023-01-12 13:08:01.128502",
  "modified_by": "Administrator",
  "module": "Kpi",
  "name": "KPI Evaluation",

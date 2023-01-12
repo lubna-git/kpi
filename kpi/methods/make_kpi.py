@@ -2,7 +2,7 @@ import frappe
 
 
 def make_kpi(doc, method):
-    
+
     if doc.status == "Completed":
 
         # Getting the employee name from the Employee table.
@@ -16,6 +16,7 @@ def make_kpi(doc, method):
         new_kpi_instance.employee = employee.name
         new_kpi_instance.task = doc.name
         new_kpi_instance.task_subject = doc.subject
+        new_kpi_instance.expected_time = doc.expected_time
 
         # Checking if the KPI Evaluation document already exists
         # If it does not exist, then it will insert the new KPI Evaluation document.
