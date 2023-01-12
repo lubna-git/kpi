@@ -104,7 +104,7 @@ app_license = "MIT"
 
 doc_events = {
 	"Task": {
-		"before_save": "kpi.methods.make_kpi.make_kpi",
+		"validate": "kpi.methods.make_kpi.make_kpi",
 		# "on_cancel": "method",
 		# "on_trash": "method"
 	}
