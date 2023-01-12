@@ -23,13 +23,11 @@
  ],
  "fields": [
   {
-   "fetch_from": "user.email",
    "fieldname": "employee",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Employee",
-   "options": "Employee",
-   "unique": 1
+   "options": "Employee"
   },
   {
    "fieldname": "team_leader",
@@ -81,7 +79,6 @@
    "read_only": 1
   },
   {
-   "fetch_from": "employee.user_id",
    "fieldname": "user",
    "fieldtype": "Link",
    "label": "User",
@@ -103,7 +100,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-01-11 11:51:48.452395",
+ "modified": "2023-01-11 18:33:31.592407",
  "modified_by": "Administrator",
  "module": "Kpi",
  "name": "KPI Evaluation",
