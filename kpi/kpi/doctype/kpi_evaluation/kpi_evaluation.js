@@ -3,29 +3,31 @@
 
 frappe.ui.form.on('KPI Evaluation', {
 	// on change the value of employee field name
-		employee: function(frm) {
-			// fillter the task field name value depened on user field name
-			cur_frm.set_query("task", function(){
-				return {
-					"filters": {
-						"completed_by":frm.doc.user
-					} 
+	employee: function (frm) {
+		// filleter the task field name value depended on user field name
+		cur_frm.set_query("task", function () {
+			return {
+				"filters": {
+					"completed_by": frm.doc.user
 				}
-			})},
-	// on change the value of KPI Template field name
-	kpi_template: async function(frm) {	
-		// get kpi list with choose kpi template
-			let doc = await frappe.db.get_doc("KPI Template",frm.doc.kpi_template)
-			doc.kpi.forEach(function(x){cur_frm.add_child("kpi",{kpi:x.kpi,description:x.description,score:x.score})});
+			}
+		})
+	},
+
+	/* Adding the kpi template to the kpi evaluation form. */
+	kpi_template: async function (frm) {
+		// check if kpi_template field is not empty or null
+		if (frm.doc.kpi_template && frm.doc.kpi_template != "") {
+			// get the KPI Template document
+			let doc = await frappe.db.get_doc("KPI Template", frm.doc.kpi_template)
+			// loop through kpi list and add them as child to the current form
+			doc.kpi.forEach(function (x) { cur_frm.add_child("kpi", { kpi: x.kpi, description: x.description, score: x.score }) });
+			// refresh the form to display the added kpi
 			frm.refresh()
-		},  
-	});
-	
-
-
-
-frappe.ui.form.on('KPI Evaluation', {
-	refresh : function(frm){
-		console.log()
-	}
-})
+		} else {
+			// clear child table rows when kpi_template field is cleared
+			cur_frm.doc.kpi = []
+			frm.refresh()
+		}
+	},
+});
