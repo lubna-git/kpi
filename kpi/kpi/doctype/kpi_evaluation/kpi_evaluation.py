@@ -5,5 +5,7 @@ import frappe
 from frappe.model.document import Document
 
 class KPIEvaluation(Document):
-	def on_save(self):
-		frappe.msgprint('this event work')
+	def before_save(self):
+		for i in self.kpi:
+			if i.evaluation > i.score:
+				frappe.throw("Evaluation Can't Be Larger Than Score")
