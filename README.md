@@ -2,9 +2,9 @@
 
 kpi management
 
-## 0.1.3 - 2023-01-31
+## 0.0.2 - 2023-02-15
 
-## Features and Changes in 0.1.3
+## Features and Changes in 0.0.2
 
 ### New Features
 
